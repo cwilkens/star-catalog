@@ -41,7 +41,7 @@
                         <td>{{ star.starName }}</td>
                         <td>{{ star.starDistance }}</td>
                         <td>{{ star.apparentMag }}</td>
-                        <td>{{ star.stellarClass }}</td>
+                        <td style.background-color="{{star.stellarClass | convertClassToColor}}">{{ star.stellarClass }}</td>
                     </tr>
                 </tbody>
             </table>

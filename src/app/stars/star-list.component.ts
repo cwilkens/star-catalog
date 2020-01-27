@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IStar } from "./stars";
 
 @Component({
@@ -6,7 +6,7 @@ import { IStar } from "./stars";
     templateUrl: './star-list.component.html',
     styleUrls: ['./star-list.component.css']
 })
-export class StarListComponent {
+export class StarListComponent implements OnInit {
     pageTitle: string = 'Star List';
     showStarSystem: boolean = false;
     starFilter: string = 'carts';
@@ -80,5 +80,9 @@ export class StarListComponent {
 
     toggleStarSystem(): void {
         this.showStarSystem = !this.showStarSystem;
+    }
+
+    ngOnInit(): void {
+        console.log('In OnInit');
     }
 }
