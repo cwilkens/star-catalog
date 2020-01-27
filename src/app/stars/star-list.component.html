@@ -6,12 +6,13 @@
         <div class='row'>
             <div class='col-md-2'>Filter by:</div>
             <div class='col-md-4'>
-                <input type='text' />
+                <input type='text'
+                    [(ngModel)]='starFilter' />
             </div>
         </div>
         <div class='row'>
             <div class='col-md-6'>
-                <h4>Filtered by:</h4>
+                <h4>Filtered by: {{starFilter}}</h4>
             </div>
         </div>
         <div class='table-responsive'>
@@ -20,11 +21,12 @@
                 <thead>
                     <tr>
                         <th>
-                            <button class='btn btn-primary'>
-                                Show Image
+                            <button class='btn btn-primary'
+                                (click)='toggleStarSystem()'>
+                                {{showStarSystem ? 'Hide' : 'Show'}} Star System
                             </button>
                         </th>
-                        <th>System</th>
+                        <!-- <th>System</th> -->
                         <th>Star</th>
                         <th>Distance</th>
                         <th>Apparent Magnitude</th>
@@ -33,8 +35,9 @@
                 </thead>
                 <tbody>
                     <tr *ngFor='let star of stars'>
-                        <td></td>
-                        <td>{{ star.starSystem }}</td>
+                        <!-- <td>
+                        </td> -->
+                        <td><div *ngIf='showStarSystem'>{{ star.starSystem }}</div></td>
                         <td>{{ star.starName }}</td>
                         <td>{{ star.starDistance }}</td>
                         <td>{{ star.apparentMag }}</td>

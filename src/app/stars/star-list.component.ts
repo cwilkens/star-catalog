@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
 })
 export class StarListComponent {
     pageTitle: string = 'Star List';
+    showStarSystem: boolean = false;
+    starFilter: string = 'carts';
     stars: any[]= [
         {
             "starId": 1,
@@ -73,4 +75,8 @@ export class StarListComponent {
         }
 
     ];
+
+    toggleStarSystem(): void {
+        this.showStarSystem = !this.showStarSystem;
+    }
 }
