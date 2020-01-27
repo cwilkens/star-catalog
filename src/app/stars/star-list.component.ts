@@ -3,7 +3,8 @@ import { IStar } from "./stars";
 
 @Component({
     selector: 'sc-stars',
-    templateUrl: './star-list.component.html'
+    templateUrl: './star-list.component.html',
+    styleUrls: ['./star-list.component.css']
 })
 export class StarListComponent {
     pageTitle: string = 'Star List';
