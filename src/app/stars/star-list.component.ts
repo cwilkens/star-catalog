@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IStar } from "./stars";
 
 @Component({
     selector: 'sc-stars',
@@ -8,13 +9,13 @@ export class StarListComponent {
     pageTitle: string = 'Star List';
     showStarSystem: boolean = false;
     starFilter: string = 'carts';
-    stars: any[]= [
+    stars: IStar[]= [
         {
             "starId": 1,
             "starSystem": "Alpha Centauri",
             "starName": "Proxima Centauri",
             "starDistance": 4.2441,
-            "apparentMag": 11.09,
+            "apparentMag": "11.09",
             "stellarClass": "M5.5Ve",
         },
         {
@@ -22,7 +23,7 @@ export class StarListComponent {
             "starSystem": "Alpha Centauri",
             "starName": "α Centauri A (HD 128620)",
             "starDistance": 4.3650,
-            "apparentMag": 0.01,
+            "apparentMag": "0.01",
             "stellarClass": "G2V",
         },
         {
@@ -30,7 +31,7 @@ export class StarListComponent {
             "starSystem": "Alpha Centauri",
             "starName": "α Centauri B (HD 128621)",
             "starDistance": 4.3650,
-            "apparentMag": 1.34,
+            "apparentMag": "1.34",
             "stellarClass": "K1V",
         },
         {
@@ -38,7 +39,7 @@ export class StarListComponent {
             "starSystem": "Barnard's Star",
             "starName": "Barnard's Star (BD+04°3561a)",
             "starDistance": 5.9577,
-            "apparentMag": 9.53,
+            "apparentMag": "9.53",
             "stellarClass": "M4.0Ve",
         },
         {
@@ -70,7 +71,7 @@ export class StarListComponent {
             "starSystem": "Wolf 359",
             "starName": "Wolf 359 (CN Leonis)",
             "starDistance": 7.856,
-            "apparentMag": 13.44,
+            "apparentMag": "13.44",
             "stellarClass": "M6.0V",
         }
 
