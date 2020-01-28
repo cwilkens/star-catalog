@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StarListComponent } from './stars/star-list.component';
 import { ConvertClassToColorPipe } from './shared/convert-class-to-color.pipe';
+import { RightAscensionComponent } from './shared/right-ascension.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StarListComponent,
-    ConvertClassToColorPipe
+    ConvertClassToColorPipe,
+    RightAscensionComponent
   ],
   imports: [
     BrowserModule,

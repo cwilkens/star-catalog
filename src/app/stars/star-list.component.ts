@@ -28,6 +28,8 @@ export class StarListComponent implements OnInit {
             "starDistance": 4.2441,
             "apparentMag": "11.09",
             "stellarClass": "M5.5Ve",
+            "rightAscension": " 14h 29m 43.0s",
+            "declination": "−62° 40′ 46″"
         },
         {
             "starId": 2,
@@ -36,6 +38,8 @@ export class StarListComponent implements OnInit {
             "starDistance": 4.3650,
             "apparentMag": "0.01",
             "stellarClass": "G2V",
+            "rightAscension": "14h 39m 36.5s",
+            "declination": "−60° 50′ 02″"
         },
         {
             "starId": 3,
@@ -44,6 +48,8 @@ export class StarListComponent implements OnInit {
             "starDistance": 4.3650,
             "apparentMag": "1.34",
             "stellarClass": "K1V",
+            "rightAscension": "14h 39m 35.1s",
+            "declination": "−60° 50′ 14″"
         },
         {
             "starId": 4,
@@ -52,6 +58,8 @@ export class StarListComponent implements OnInit {
             "starDistance": 5.9577,
             "apparentMag": "9.53",
             "stellarClass": "M4.0Ve",
+            "rightAscension": "17h 57m 48.5s",
+            "declination": "+04° 41′ 36″"
         },
         {
             "starId": 5,
@@ -60,6 +68,8 @@ export class StarListComponent implements OnInit {
             "starDistance": 6.5029,
             "apparentMag": "10.7 J",
             "stellarClass": "L8±1",
+            "rightAscension": "10h 49m 15.57s",
+            "declination": "−53° 19′ 06″"
         },
         {
             "starId": 6,
@@ -68,6 +78,8 @@ export class StarListComponent implements OnInit {
             "starDistance": 6.5029,
             "apparentMag": "",
             "stellarClass": "T1±2",
+            "rightAscension": "10h 49m 15.57s",
+            "declination": "−53° 19′ 06″"
         },
         {
             "starId": 7,
@@ -76,6 +88,8 @@ export class StarListComponent implements OnInit {
             "starDistance": 7.26,
             "apparentMag": "25.0 J",
             "stellarClass": "Y2",
+            "rightAscension": " 08h 55m 10.83s",
+            "declination": "−07° 14′ 42.5″"
         },
         {
             "starId": 8,
@@ -84,6 +98,8 @@ export class StarListComponent implements OnInit {
             "starDistance": 7.856,
             "apparentMag": "13.44",
             "stellarClass": "M6.0V",
+            "rightAscension": "10h 56m 29.2s",
+            "declination": "+07° 00′ 53″	"
         }
     ];
 

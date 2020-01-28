@@ -5,4 +5,6 @@ export interface IStar {
     starDistance: number;
     apparentMag: string;
     stellarClass: string;
+    rightAscension: string;
+    declination: string;
 }

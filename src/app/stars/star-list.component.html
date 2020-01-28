@@ -30,6 +30,8 @@
                         <th>Distance</th>
                         <th>Apparent Magnitude</th>
                         <th>Stellar Class</th>
+                        <th>Right Ascension</th>
+                        <th>Declination</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -39,6 +41,8 @@
                         <td>{{ star.starDistance }}</td>
                         <td>{{ star.apparentMag }}</td>
                         <td style.background-color="{{star.stellarClass | convertClassToColor}}">{{ star.stellarClass }}</td>
+                        <td><sc-right-ascension [rightAscension]='star.rightAscension'></sc-right-ascension></td>
+                        <td></td>
                     </tr>
                 </tbody>
             </table>
