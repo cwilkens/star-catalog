@@ -26,7 +26,6 @@
                                 {{showStarSystem ? 'Hide' : 'Show'}} Star System
                             </button>
                         </th>
-                        <!-- <th>System</th> -->
                         <th>Star</th>
                         <th>Distance</th>
                         <th>Apparent Magnitude</th>
@@ -34,9 +33,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor='let star of stars'>
-                        <!-- <td>
-                        </td> -->
+                    <tr *ngFor='let star of filteredStars'>
                         <td><div *ngIf='showStarSystem'>{{ star.starSystem }}</div></td>
                         <td>{{ star.starName }}</td>
                         <td>{{ star.starDistance }}</td>

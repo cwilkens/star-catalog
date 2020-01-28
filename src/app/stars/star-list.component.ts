@@ -9,7 +9,17 @@ import { IStar } from "./stars";
 export class StarListComponent implements OnInit {
     pageTitle: string = 'Star List';
     showStarSystem: boolean = false;
-    starFilter: string = 'carts';
+
+    _starFilter: string;
+    get starFilter(): string {
+        return this._starFilter;
+    }
+    set starFilter(value: string) {
+        this._starFilter = value;
+        this.filteredStars = this.starFilter ? this.performFilter(this.starFilter) : this.stars;
+    }
+
+    filteredStars: IStar[];
     stars: IStar[]= [
         {
             "starId": 1,
@@ -75,8 +85,18 @@ export class StarListComponent implements OnInit {
             "apparentMag": "13.44",
             "stellarClass": "M6.0V",
         }
-
     ];
+
+    constructor() {
+        this.filteredStars = this.stars;
+        this.starFilter = '';
+    }
+
+    performFilter(filterBy: string): IStar[] {
+        filterBy = filterBy.toLocaleLowerCase();
+        return this.stars.filter((star: IStar) =>
+            star.starName.toLocaleLowerCase().indexOf(filterBy) !== -1);
+    }
 
     toggleStarSystem(): void {
         this.showStarSystem = !this.showStarSystem;
