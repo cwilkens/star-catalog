@@ -42,7 +42,7 @@
                         <td>{{ star.apparentMag }}</td>
                         <td style.background-color="{{star.stellarClass | convertClassToColor}}">{{ star.stellarClass }}</td>
                         <td><sc-right-ascension [rightAscension]='star.rightAscension'></sc-right-ascension></td>
-                        <td></td>
+                        <td><sc-declination [declination]='star.declination'></sc-declination></td>
                     </tr>
                 </tbody>
             </table>

@@ -2,8 +2,7 @@ import { Component, OnChanges, Input } from '@angular/core';
 
 @Component({
     selector: 'sc-right-ascension',
-    templateUrl: './right-ascension.component.html',
-    styleUrls: ['./right-ascension.component.css']
+    templateUrl: './right-ascension.component.html'
 })
 export class RightAscensionComponent implements OnChanges {
     @Input() rightAscension: string;
