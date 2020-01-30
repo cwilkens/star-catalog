@@ -1,11 +1,58 @@
 <div class='card' *ngIf='star'>
     <div class='card-header'>
-        {{pageTitle + ': ' + star.starName}}
+        {{pageTitle}}
+    </div>
+    <div class='row no-gutters'>
+        <div class='col-md-5' style='background-color: lightgray;'>
+            <!-- <img src='...' class='card-img' alt='...'> -->
+        </div>
+        <div class='col-md-7'>
+            <div class='card-body'>
+                <h5 class='card-title'>{{star.starName}}</h5>
+                <div class='table-responsive'>
+                    <table class='table'>
+                        <tbody>
+                            <tr>
+                                <td>Star System</td>
+                                <td>{{ star.starSystem }}</td>
+                            </tr>
+                            <tr>
+                                <td>Star</td>
+                                <td>{{ star.starName }}</td>
+                            </tr>
+                            <tr>
+                                <td>Distance</td>
+                                <td>{{ star.starDistance }} light-years</td>
+                            </tr>
+                            <tr>
+                                <td>Apparent Magnitude</td>
+                                <td>{{ star.apparentMag }}</td>
+                            </tr>
+                            <tr>
+                                <td>Stellar Class</td>
+                                <td style.background-color="{{star.stellarClass | convertClassToColor}}">
+                                    {{ star.stellarClass }}</td>
+                            </tr>
+                            <tr>
+                                <td>Right Ascension</td>
+                                <td>
+                                    <sc-right-ascension [rightAscension]='star.rightAscension'></sc-right-ascension>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Declination</td>
+                                <td>
+                                    <sc-declination [declination]='star.declination'></sc-declination>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
     <div class='card-footer'>
-        <button class='btn btn-outline-secondary'
-                (click)='onBack()'
-                style='width:80px'>
+        <button class='btn btn-outline-secondary' (click)='onBack()' style='width:80px'>
             <i class='fa fa-chevron-left'></i> Back
         </button>
     </div>

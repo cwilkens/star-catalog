@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { catchError, tap } from 'rxjs/operators';
+import { catchError, tap, map } from 'rxjs/operators';
 
 import { IStar } from './stars';
 
@@ -18,6 +18,13 @@ export class StarService {
         .pipe(
             tap(data => console.log('All: ' + JSON.stringify(data))),
             catchError(this.handleError)
+        );
+    }
+
+    getStar(id: number): Observable<IStar> {
+        return this.getStars()
+        .pipe(
+            map((stars: IStar[]) => stars.find(s => s.starId === id))
         );
     }
 
