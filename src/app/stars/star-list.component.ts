@@ -3,7 +3,6 @@ import { IStar } from "./stars";
 import { StarService } from './star.service';
 
 @Component({
-    selector: 'sc-stars',
     templateUrl: './star-list.component.html',
     styleUrls: ['./star-list.component.css']
 })

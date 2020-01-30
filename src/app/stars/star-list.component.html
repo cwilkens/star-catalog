@@ -37,7 +37,11 @@
                 <tbody>
                     <tr *ngFor='let star of filteredStars'>
                         <td><div *ngIf='showStarSystem'>{{ star.starSystem }}</div></td>
-                        <td>{{ star.starName }}</td>
+                        <td>
+                            <a [routerLink]="['/stars', star.starId]">
+                                {{ star.starName }}
+                            </a>
+                        </td>
                         <td>{{ star.starDistance }}</td>
                         <td>{{ star.apparentMag }}</td>
                         <td style.background-color="{{star.stellarClass | convertClassToColor}}">{{ star.stellarClass }}</td>
