@@ -9,6 +9,8 @@ import { StarListComponent } from './stars/star-list.component';
 import { ConvertClassToColorPipe } from './shared/convert-class-to-color.pipe';
 import { RightAscensionComponent } from './shared/right-ascension.component';
 import { DeclinationComponent } from './shared/declination.component';
+import { StarDetailComponent } from './stars/star-detail.component';
+import { WelcomeComponent } from './home/welcome.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { DeclinationComponent } from './shared/declination.component';
     StarListComponent,
     ConvertClassToColorPipe,
     RightAscensionComponent,
-    DeclinationComponent
+    DeclinationComponent,
+    StarDetailComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
