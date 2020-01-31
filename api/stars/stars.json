@@ -78,5 +78,55 @@
         "stellarClass": "M6.0V",
         "rightAscension": "10h 56m 29.2s",
         "declination": "+07° 00′ 53″"
+    },
+    {
+        "starId": 9,
+        "starSystem": "Lalande 21185 (BD+36°2147)",
+        "starName": "Lalande 21185 (BD+36°2147)",
+        "starDistance": 8.307,
+        "apparentMag": "7.47",
+        "stellarClass": "M2.0V",
+        "rightAscension": "11h 03m 20.2s",
+        "declination": "+35° 58′ 12″"
+    },
+    {
+        "starId": 10,
+        "starSystem": "Sirius (α Canis Majoris)",
+        "starName": "Sirius A",
+        "starDistance": 8.659,
+        "apparentMag": "−1.46",
+        "stellarClass": "A1V",
+        "rightAscension": "06h 45m 08.9s",
+        "declination": "−16° 42′ 58″"
+    },
+    {
+        "starId": 11,
+        "starSystem": "Sirius (α Canis Majoris)",
+        "starName": "Sirius B",
+        "starDistance": 8.659,
+        "apparentMag": "8.44",
+        "stellarClass": "DA2",
+        "rightAscension": "06h 45m 08.9s",
+        "declination": "−16° 42′ 58″"
+    },
+    {
+        "starId": 12,
+        "starSystem": "Luyten 726-8",
+        "starName": "Luyten 726-8 A (BL Ceti)",
+        "starDistance": 8.791,
+        "apparentMag": "12.54",
+        "stellarClass": "M5.5Ve",
+        "rightAscension": "01h 39m 01.3s",
+        "declination": "−17° 57′ 01″"
+    },
+    {
+        "starId": 12,
+        "starSystem": "Luyten 726-8",
+        "starName": "Luyten 726-8 B (UV Ceti)",
+        "starDistance": 8.791,
+        "apparentMag": "12.99",
+        "stellarClass": "M6.0Ve",
+        "rightAscension": "01h 39m 01.3s",
+        "declination": "−17° 57′ 01″"
     }
 ]
