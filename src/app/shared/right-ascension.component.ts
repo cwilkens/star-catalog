@@ -1,4 +1,4 @@
-import { Component, OnChanges, Input } from '@angular/core';
+import { Component, OnChanges, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'sc-right-ascension',
@@ -9,6 +9,7 @@ export class RightAscensionComponent implements OnChanges {
     hours: number;
     minutes: number;
     seconds: number;
+    @Output() decimalRightAscension: EventEmitter<number> = new EventEmitter<number>();
 
     ngOnChanges(): void {
         // convert given string to h/m/s
@@ -18,7 +19,7 @@ export class RightAscensionComponent implements OnChanges {
         this.hours = +this.rightAscension.substring(0, hIndex);
         this.minutes = +this.rightAscension.substring(hIndex+1, mIndex);
         this.seconds = +this.rightAscension.substring(mIndex+1, sIndex);
-        
-        // redraw (future) circle
+        var decimal = this.hours + (this.minutes / 60) + (this.seconds / 3600);
+        this.decimalRightAscension.emit(decimal);
     }
 } 

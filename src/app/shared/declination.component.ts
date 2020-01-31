@@ -1,4 +1,4 @@
-import { Component, OnChanges, Input } from '@angular/core';
+import { Component, OnChanges, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'sc-declination',
@@ -9,6 +9,7 @@ export class DeclinationComponent implements OnChanges {
     degrees: number;
     arcminutes: number;
     arcseconds: number;
+    @Output() decimalDeclination: EventEmitter<number> = new EventEmitter<number>();
 
     ngOnChanges(): void {
         // convert given string to °/′/″
@@ -18,5 +19,7 @@ export class DeclinationComponent implements OnChanges {
         this.degrees = parseInt(this.declination.substring(0, dIndex).replace('−', '-'));
         this.arcminutes = +this.declination.substring(dIndex+1, mIndex);
         this.arcseconds = +this.declination.substring(mIndex+1, sIndex);
+        var decimal = this.degrees + ((this.arcminutes / 60) + (this.arcseconds / 3600)) * (this.degrees < 0 ? -1 : 1);
+        this.decimalDeclination.emit(decimal);
     }
 }
